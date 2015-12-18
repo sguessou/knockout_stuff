@@ -1,0 +1,31 @@
+<div class="container-fluid">
+	<div class="row">
+	  	<div  id="kentta" class="col-sm-12">
+
+			<h1 data-bind="text: title"></h1>
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Pvm</th>
+						<th>Korva</th>
+						<th>Tunnus</th>
+						<th>Työ</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- ko foreach: tyolista -->
+						<tr>
+							<td data-bind="text: tuleva_pvm"></td>
+							<td data-bind="text: korva"></td>
+							<td data-bind="text: tunnus"></td>
+							<td data-bind="text: tyo"></td>
+						</tr>
+					<!-- /ko -->
+				</tbody>
+			</table>	
+
+			<button data-bind="event: { click: getNextPortion }"type="button" class="btn btn-primary btn-lg btn-block">Lisää</button>
+		</div><!-- //.col-sm-12 -->
+	</div><!-- //.row -->
+</div>
